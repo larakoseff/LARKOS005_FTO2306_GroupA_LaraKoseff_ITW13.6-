@@ -59,7 +59,9 @@ a {
 /* ===== main ====== */
 
 main {
-
+display: grid;
+grid-template-areas: 
+"categories categories aside-content";
 }
 
 .main-content {
@@ -71,7 +73,9 @@ main {
 .aside-content {
     position: sticky;
     top: 5rem;
+    grid-area: aside-content;
 }
+
 .aside-link:hover {
     border-radius: 7px;
     padding: 2px;
@@ -85,12 +89,16 @@ main {
 
 .categories {
     text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
 }
 
 .category {
     padding: 5px;
     background-color: rgb(226, 204, 172);
-    margin: 0.25rem;
+    margin: 0;
 }
 .category:hover {
 
